@@ -2,13 +2,10 @@
 
 > A  TUI system monitor written in Rust
 
-`mizu` (水, *water*) is a terminal system monitor that turns your machine's
-CPU, RAM, disk, and network activity into a calm, flowing deep-sea panel.
-The center "flow" panel plays **Bad Apple!!** as a live ASCII animation
-while metrics stream around it. Built on
-[ratatui](https://github.com/ratatui/ratatui) with an Elm-style
-architecture — metrics collection, animation ticks, and rendering stay
-cleanly separated.
+`mizu` (水, *water*) is a terminal-based system monitor that tracks your CPU, RAM, disk, and network usage.
+The main twist? The center panel plays a live ASCII animation of **Bad Apple!!** while your system stats update around it.
+
+It's built using [ratatui](https://github.com/ratatui/ratatui) with an Elm-style architecture, keeping the data collection, animation logic, and UI rendering decoupled.
 
 ```
  水 mizu  ~ fluid system monitor ~        CPU: 13th Gen Intel(R) Core(TM) i7   GPU: NVIDIA RTX 4060
