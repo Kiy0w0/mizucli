@@ -1,0 +1,33 @@
+[package]
+name = "mizucli"
+version = "0.1.0"
+edition = "2021"
+authors = ["kiy0w0"]
+description = "Mizu (水) — a fluid, water-themed TUI system monitor"
+license = "MIT"
+repository = "https://github.com/kiy0w0/mizucli"
+
+[[bin]]
+name = "mizu"
+path = "src/main.rs"
+
+[dependencies]
+ratatui = "0.28"
+crossterm = { version = "0.28", features = ["event-stream"] }
+sysinfo = "0.32"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "signal"] }
+anyhow = "1"
+humansize = "2"
+dirs = "6"
+toml = "0.8"
+serde = { version = "1", features = ["derive"] }
+
+[dev-dependencies]
+sysinfo = "0.32"
+tempfile = "3"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
+opt-level = 3
