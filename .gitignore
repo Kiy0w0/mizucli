@@ -2,8 +2,8 @@
 **/*.rs.bk
 *.pdb
 
-/tests/
-/tests2/
+tests/
+tests2/
 
 /src/data/
 
